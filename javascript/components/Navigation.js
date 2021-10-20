@@ -1,4 +1,4 @@
-import Component from "classes/Component";
+import Component from "classes/Component"
 
 export default class Navigation extends Component {
   constructor({ template }) {
@@ -7,6 +7,6 @@ export default class Navigation extends Component {
       elements: {
         links: ".navigation__item"
       }
-    });
+    })
   }
 }

@@ -1,4 +1,4 @@
-import Page from "classes/Page";
+import Page from "classes/Page"
 
 export default class Home extends Page {
   constructor() {
@@ -8,11 +8,11 @@ export default class Home extends Page {
       elements: {
         homeBtn: "#home_btn"
       }
-    });
+    })
   }
 
   create() {
-    super.create();
-    console.log("Home Class");
+    super.create()
+    console.log("Home Class")
   }
 }
