@@ -7,6 +7,12 @@ class App {
     this.createContent()
     this.createPages()
     this.addRouterListeners()
+
+    // Reacting to back or foward button to router
+    window.onpopstate = () => {
+      const { href } = window.location
+      this.onChange(href)
+    }
   }
 
   createContent() {
@@ -33,11 +39,6 @@ class App {
   // Mimic React Router
   async onChange(url) {
     const request = await window.fetch(url)
-
-    //Setting router path on URL
-    const anchor = document.createElement("a")
-    anchor.href = url
-    this.onNavigate(anchor.pathname)
 
     // Rendering page
     if (request.status === 200) {
@@ -73,7 +74,10 @@ class App {
 
       link.onclick = (event) => {
         event.preventDefault()
-        const { href } = link
+        const { href, pathname } = link
+
+        // Setting router path on URL
+        this.onNavigate(pathname)
         this.onChange(href)
       }
     })
