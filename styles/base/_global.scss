@@ -1,0 +1,55 @@
+/* ==========================================================================
+	GLOBAL
+========================================================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header, .footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin: 0 200px;
+}
+
+.header {
+  padding: 60px 0;
+
+  &__logo {
+    width: 140px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    float: left;
+    vertical-align: top;
+  }
+}
+
+.footer {
+  height: 60px;
+  background-color: $color-white;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin: 0 200px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin: 6px 0;
+  padding: 10px 18px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+  
+  &--primary {
+    background-color: $color-blue;
+  }
+}

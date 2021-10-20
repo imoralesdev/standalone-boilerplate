@@ -1,0 +1,40 @@
+.home {
+  padding: 4em 0;
+  
+  &__column-1,
+  &__column-2 {
+    display: table-cell;
+  }
+
+  &__column-1 {
+    vertical-align: middle;
+    width: 40%;
+  }
+
+  &__column-2 {
+    width: 60%;
+  }
+
+  &__header {
+    font-size: 32px;
+  }
+
+  &__text {
+    font-size: 18px;
+    padding: 1em 0;
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 56.26%;
+    width: 90%;
+    margin: auto;
+
+    img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

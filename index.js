@@ -1,13 +1,43 @@
 const express = require("express");
-const port = process.env.PORT || 3000;
+const bodyParser = require("body-parser");
+const errorHandler = require("errorhandler");
+const logger = require("morgan");
+const methodOverride = require("method-override");
+
+const port = process.env.PORT || 8080;
+const path = require("path");
 const app = express();
 
-app.get("/", (req, res) => res.send("Home page route"));
+app.use(logger("dev"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride());
+app.use(errorHandler());
 
-app.get("/about", (req, res) => res.send("About page route"));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+app.use(express.static(path.join(__dirname, "/public/")));
 
-app.get("/portfolio", (req, res) => res.send("Portfolio page route"));
+app.get("/", (req, res) => {
+  res.render("pages/home", {
+    template: "home",
+    title: "Example Web Page | Home"
+  });
+});
 
-app.get("/contact", (req, res) => res.send("Contact page route"));
+app.get("/about", (req, res) => {
+  res.render("pages/about", {
+    template: "about",
+    title: "Example Web Page | About"
+  });
+});
 
-app.listen(port, () => console.log(`Dev server running at http://localhost:${port}`));
+app.get("/portfolio", (req, res) => {
+  res.render("pages/portfolio", {
+    template: "portfolio"
+  });
+});
+
+app.listen(port, () =>
+  console.log(`Dev server running at http://localhost:${port}`)
+);
