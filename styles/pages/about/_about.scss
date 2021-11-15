@@ -2,57 +2,43 @@
 	ABOUT PAGE
 ========================================================================== */
 .about {
-  &__column-1,
-  &__column-2 {
-    width: 50%;
-    display: inline-block;
-    padding-top: 30%;
-    vertical-align: top;
-    position: relative;
-  }
-
-  &__column-3 {
-    padding-top: 56.25%;
-    position: relative;
-  }
-
-  &__container {
-    position: absolute;
-    top: 50%;
-    margin: 0 46px;
-    transform: translateY(-50%);
-  }
-
   &__header {
     font-size: 32px;
+    text-align: center;
   }
 
-  &__text {
+  &__sub-header {
+    font-size: 18px;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: row;
+    padding: 4em 0;
+    text-align: center;
+  }
+
+  &__features-box {
+    background: #F9F9FF;
+    text-align: start;
+    width: 33.33%;
+  }
+
+  &__features-title {
     font-size: 18px;
     padding: 1em 0;
   }
 
-  &__img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__video {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    
-    iframe, img {
-      width: 100%;
-      height: 100%;
+  &__features-drafting {
+    width: 52px;
+    height: 52px;
+    position: relative;
+    use {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }
