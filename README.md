@@ -6,7 +6,7 @@ This project utilizes modern tools and a streamlined development pipeline to cre
 - Babel (@babel/core, babel-loader): Transpiles modern JavaScript (ES6+) for compatibility with older browsers.
 - Webpack: Modularizes and bundles assets with advanced optimizations, including:
 - Loaders:
-* css-loader, sass-loader: Enables processing of CSS and SCSS files.
+** css-loader, sass-loader: Enables processing of CSS and SCSS files.
 -- file-loader, url-loader: Handles images and other assets.
 -- raw-loader: Processes raw content like SVG files.
 -- pug: Allows template creation with a clean syntax.
