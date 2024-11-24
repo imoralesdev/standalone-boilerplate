@@ -5,18 +5,8 @@ This project utilizes modern tools and a streamlined development pipeline to cre
 ## Key Features and Tools
 - Babel (@babel/core, babel-loader): Transpiles modern JavaScript (ES6+) for compatibility with older browsers.
 - Webpack: Modularizes and bundles assets with advanced optimizations, including:
-- Loaders:
-** css-loader, sass-loader: Enables processing of CSS and SCSS files.
--- file-loader, url-loader: Handles images and other assets.
--- raw-loader: Processes raw content like SVG files.
--- pug: Allows template creation with a clean syntax.
--- glslify-loader: Processes GLSL shaders for advanced visual effects.
-- Plugins:
--- clean-webpack-plugin: Ensures clean builds by removing old files.
--- copy-webpack-plugin: Copies assets to the output directory.
--- image-minimizer-webpack-plugin: Optimizes image assets for better performance.
--- mini-css-extract-plugin: Extracts CSS into separate files.
--- terser-webpack-plugin: Minifies JavaScript for production builds.
+- Loaders: css-loader, sass-loader: Enables processing of CSS and SCSS files. file-loader, url-loader: Handles images and other assets. raw-loader: Processes raw content like SVG files. pug: Allows template creation with a clean syntax. glslify-loader: Processes GLSL shaders for advanced visual effects.
+- Plugins: clean-webpack-plugin: Ensures clean builds by removing old files. copy-webpack-plugin: Copies assets to the output directory. image-minimizer-webpack-plugin: Optimizes image assets for better performance. mini-css-extract-plugin: Extracts CSS into separate files. terser-webpack-plugin: Minifies JavaScript for production builds.
 - Sass: Streamlines stylesheets with advanced features like variables and mixins.
 - PostCSS: Adds CSS transformations for enhanced browser compatibility.
 - Nodemon: Automates server restarts during development.
